@@ -43,6 +43,6 @@ It was running super slow so I started by adding memoization to the recursion so
 
 I completed the entire project at 5/30/2019 4 PM. Adding the memoization took a while.
 
-It's still running slow. I think the next thing i would want to do if I were to continue this further is put memoization at the database call level or perhaps somewhere else. Also it might be possible to find some early stopping criteria. Not sure.
+It's still running slow. If I would continue this further, I would try to put memoization at the database call level and perhaps other places too. If you look at the logs, the same database calls are happening over and over, so this would be a great improvement. Also it might be possible to find some early stopping criteria. Not sure.
 
 This was an interesting problem! Thanks for the opportunity!
