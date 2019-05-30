@@ -1985,3 +1985,355 @@ FOREIGN KEY ("product_id")
   ↳ db/seeds.rb:93
   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
   ↳ db/seeds.rb:93
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (41.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (7980.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "buddy_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (256.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "buddy_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (206.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "buddy_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (487.5ms)[0m  [1m[35mCREATE DATABASE "buddy_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (434.4ms)[0m  [1m[35mCREATE DATABASE "buddy_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2718074140251676710)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateProducts (20190530165502)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (45.0ms)[0m  [1m[35mCREATE TABLE "products" ("id" bigserial primary key, "description" character varying NOT NULL, "size" integer, "quantity" integer DEFAULT 0 NOT NULL, "cost" float NOT NULL, "sale_price" float NOT NULL, "type" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190530165502_create_products.rb:3
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_products_on_description" ON "products"  ("description")[0m
+  ↳ db/migrate/20190530165502_create_products.rb:3
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_products_on_size" ON "products"  ("size")[0m
+  ↳ db/migrate/20190530165502_create_products.rb:3
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_products_on_type" ON "products"  ("type")[0m
+  ↳ db/migrate/20190530165502_create_products.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190530165502"]]
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateCompatibilities (20190530165616)
+  [1m[35m (40.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "compatibilities" ("id" bigserial primary key, "stuffed_animal_id" bigint NOT NULL, "accessory_id" bigint NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_493980402c"
+FOREIGN KEY ("stuffed_animal_id")
+  REFERENCES "products" ("id")
+, CONSTRAINT "fk_rails_a944181f38"
+FOREIGN KEY ("accessory_id")
+  REFERENCES "products" ("id")
+)[0m
+  ↳ db/migrate/20190530165616_create_compatibilities.rb:3
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_compatibilities_on_stuffed_animal_id" ON "compatibilities"  ("stuffed_animal_id")[0m
+  ↳ db/migrate/20190530165616_create_compatibilities.rb:3
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_compatibilities_on_accessory_id" ON "compatibilities"  ("accessory_id")[0m
+  ↳ db/migrate/20190530165616_create_compatibilities.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190530165616"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateOrders (20190530165650)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "orders" ("id" bigserial primary key, "order_date" timestamp NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190530165650_create_orders.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190530165650"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreatePurchases (20190530165709)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "purchases" ("id" bigserial primary key, "order_id" bigint NOT NULL, "product_id" bigint NOT NULL, "quantity" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_a9d81871ca"
+FOREIGN KEY ("order_id")
+  REFERENCES "orders" ("id")
+, CONSTRAINT "fk_rails_0d630f0bc7"
+FOREIGN KEY ("product_id")
+  REFERENCES "products" ("id")
+)[0m
+  ↳ db/migrate/20190530165709_create_purchases.rb:3
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_purchases_on_order_id" ON "purchases"  ("order_id")[0m
+  ↳ db/migrate/20190530165709_create_purchases.rb:3
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX  "index_purchases_on_product_id" ON "purchases"  ("product_id")[0m
+  ↳ db/migrate/20190530165709_create_purchases.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190530165709"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-05-30 18:34:54.289343"], ["updated_at", "2019-05-30 18:34:54.289343"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(2718074140251676710)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mStuffedAnimal Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."type" IN ('StuffedAnimal') AND "products"."description" = $1 AND "products"."type" = $2 LIMIT $3[0m  [["description", "Bear"], ["type", "StuffedAnimal"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[36mStuffedAnimal Create (0.6ms)[0m  [1m[32mINSERT INTO "products" ("description", "quantity", "cost", "sale_price", "type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["description", "Bear"], ["quantity", 215], ["cost", 3.21], ["sale_price", 29.99], ["type", "StuffedAnimal"], ["created_at", "2019-05-30 18:34:54.351870"], ["updated_at", "2019-05-30 18:34:54.351870"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (40.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mStuffedAnimal Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."type" IN ('StuffedAnimal') AND "products"."description" = $1 AND "products"."type" = $2 LIMIT $3[0m  [["description", "Elephant"], ["type", "StuffedAnimal"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[36mStuffedAnimal Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("description", "quantity", "cost", "sale_price", "type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["description", "Elephant"], ["quantity", 345], ["cost", 3.08], ["sale_price", 29.99], ["type", "StuffedAnimal"], ["created_at", "2019-05-30 18:34:54.397981"], ["updated_at", "2019-05-30 18:34:54.397981"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mStuffedAnimal Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."type" IN ('StuffedAnimal') AND "products"."description" = $1 AND "products"."type" = $2 LIMIT $3[0m  [["description", "Tiger"], ["type", "StuffedAnimal"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[36mStuffedAnimal Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("description", "quantity", "cost", "sale_price", "type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["description", "Tiger"], ["quantity", 321], ["cost", 3.78], ["sale_price", 29.99], ["type", "StuffedAnimal"], ["created_at", "2019-05-30 18:34:54.403178"], ["updated_at", "2019-05-30 18:34:54.403178"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mStuffedAnimal Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."type" IN ('StuffedAnimal') AND "products"."description" = $1 AND "products"."type" = $2 LIMIT $3[0m  [["description", "Gorilla"], ["type", "StuffedAnimal"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:9
+  [1m[36mStuffedAnimal Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("description", "quantity", "cost", "sale_price", "type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["description", "Gorilla"], ["quantity", 78], ["cost", 3.94], ["sale_price", 29.99], ["type", "StuffedAnimal"], ["created_at", "2019-05-30 18:34:54.406177"], ["updated_at", "2019-05-30 18:34:54.406177"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mAccessory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."type" IN ('Accessory') AND "products"."description" = $1 AND "products"."size" = $2 AND "products"."type" = $3 LIMIT $4[0m  [["description", "Shoes"], ["size", 0], ["type", "Accessory"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mAccessory Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("description", "size", "quantity", "cost", "sale_price", "type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["description", "Shoes"], ["size", 0], ["quantity", 113], ["cost", 2.45], ["sale_price", 12.99], ["type", "Accessory"], ["created_at", "2019-05-30 18:34:54.416664"], ["updated_at", "2019-05-30 18:34:54.416664"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mAccessory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."type" IN ('Accessory') AND "products"."description" = $1 AND "products"."size" = $2 AND "products"."type" = $3 LIMIT $4[0m  [["description", "Shoes"], ["size", 1], ["type", "Accessory"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mAccessory Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("description", "size", "quantity", "cost", "sale_price", "type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["description", "Shoes"], ["size", 1], ["quantity", 145], ["cost", 2.51], ["sale_price", 13.99], ["type", "Accessory"], ["created_at", "2019-05-30 18:34:54.419204"], ["updated_at", "2019-05-30 18:34:54.419204"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mAccessory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."type" IN ('Accessory') AND "products"."description" = $1 AND "products"."size" = $2 AND "products"."type" = $3 LIMIT $4[0m  [["description", "Shoes"], ["size", 2], ["type", "Accessory"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mAccessory Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("description", "size", "quantity", "cost", "sale_price", "type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["description", "Shoes"], ["size", 2], ["quantity", 84], ["cost", 2.67], ["sale_price", 14.99], ["type", "Accessory"], ["created_at", "2019-05-30 18:34:54.422035"], ["updated_at", "2019-05-30 18:34:54.422035"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mAccessory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."type" IN ('Accessory') AND "products"."description" = $1 AND "products"."size" = $2 AND "products"."type" = $3 LIMIT $4[0m  [["description", "T-Shirt"], ["size", 0], ["type", "Accessory"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mAccessory Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("description", "size", "quantity", "cost", "sale_price", "type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["description", "T-Shirt"], ["size", 0], ["quantity", 215], ["cost", 1.28], ["sale_price", 7.99], ["type", "Accessory"], ["created_at", "2019-05-30 18:34:54.424440"], ["updated_at", "2019-05-30 18:34:54.424440"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mAccessory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."type" IN ('Accessory') AND "products"."description" = $1 AND "products"."size" = $2 AND "products"."type" = $3 LIMIT $4[0m  [["description", "T-Shirt"], ["size", 1], ["type", "Accessory"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mAccessory Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("description", "size", "quantity", "cost", "sale_price", "type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["description", "T-Shirt"], ["size", 1], ["quantity", 175], ["cost", 1.31], ["sale_price", 8.99], ["type", "Accessory"], ["created_at", "2019-05-30 18:34:54.426664"], ["updated_at", "2019-05-30 18:34:54.426664"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mAccessory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."type" IN ('Accessory') AND "products"."description" = $1 AND "products"."size" = $2 AND "products"."type" = $3 LIMIT $4[0m  [["description", "T-Shirt"], ["size", 2], ["type", "Accessory"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mAccessory Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("description", "size", "quantity", "cost", "sale_price", "type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["description", "T-Shirt"], ["size", 2], ["quantity", 123], ["cost", 1.35], ["sale_price", 9.99], ["type", "Accessory"], ["created_at", "2019-05-30 18:34:54.429183"], ["updated_at", "2019-05-30 18:34:54.429183"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mAccessory Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."type" IN ('Accessory') AND "products"."description" = $1 AND "products"."size" = $2 AND "products"."type" = $3 LIMIT $4[0m  [["description", "Tiara"], ["size", 3], ["type", "Accessory"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mAccessory Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("description", "size", "quantity", "cost", "sale_price", "type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["description", "Tiara"], ["size", 3], ["quantity", 28], ["cost", 0.78], ["sale_price", 7.99], ["type", "Accessory"], ["created_at", "2019-05-30 18:34:54.431497"], ["updated_at", "2019-05-30 18:34:54.431497"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mAccessory Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "products" WHERE "products"."type" IN ('Accessory') AND "products"."description" = $1 AND "products"."size" = $2 AND "products"."type" = $3 LIMIT $4[0m  [["description", "Glasses"], ["size", 3], ["type", "Accessory"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mAccessory Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("description", "size", "quantity", "cost", "sale_price", "type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["description", "Glasses"], ["size", 3], ["quantity", 52], ["cost", 0.53], ["sale_price", 6.99], ["type", "Accessory"], ["created_at", "2019-05-30 18:34:54.434112"], ["updated_at", "2019-05-30 18:34:54.434112"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[36mStuffedAnimal Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."type" IN ('StuffedAnimal') AND "products"."description" = $1 LIMIT $2[0m  [["description", "Bear"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:32
+  [1m[36mAccessory Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."type" IN ('Accessory') AND "products"."description" = $1 AND "products"."size" = $2 LIMIT $3[0m  [["description", "Shoes"], ["size", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:37
+  [1m[36mAccessory Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."type" IN ('Accessory') AND "products"."description" = $1 AND "products"."size" = $2 LIMIT $3[0m  [["description", "T-Shirt"], ["size", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:40
+  [1m[36mAccessory Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."type" IN ('Accessory') AND "products"."description" = $1 AND "products"."size" = $2 LIMIT $3[0m  [["description", "Tiara"], ["size", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:43
+  [1m[36mAccessory Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."type" IN ('Accessory') AND "products"."description" = $1 AND "products"."size" = $2 LIMIT $3[0m  [["description", "Glasses"], ["size", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:46
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:33
+  [1m[36mCompatibility Create (1.0ms)[0m  [1m[32mINSERT INTO "compatibilities" ("stuffed_animal_id", "accessory_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stuffed_animal_id", 1], ["accessory_id", 6], ["created_at", "2019-05-30 18:34:54.460140"], ["updated_at", "2019-05-30 18:34:54.460140"]]
+  ↳ db/seeds.rb:33
+  [1m[35m (40.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:33
+  [1m[36mCompatibility Create (0.4ms)[0m  [1m[32mINSERT INTO "compatibilities" ("stuffed_animal_id", "accessory_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stuffed_animal_id", 1], ["accessory_id", 9], ["created_at", "2019-05-30 18:34:54.504021"], ["updated_at", "2019-05-30 18:34:54.504021"]]
+  ↳ db/seeds.rb:33
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:33
+  [1m[36mCompatibility Create (0.4ms)[0m  [1m[32mINSERT INTO "compatibilities" ("stuffed_animal_id", "accessory_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stuffed_animal_id", 1], ["accessory_id", 11], ["created_at", "2019-05-30 18:34:54.508683"], ["updated_at", "2019-05-30 18:34:54.508683"]]
+  ↳ db/seeds.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:33
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:33
+  [1m[36mCompatibility Create (0.4ms)[0m  [1m[32mINSERT INTO "compatibilities" ("stuffed_animal_id", "accessory_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stuffed_animal_id", 1], ["accessory_id", 12], ["created_at", "2019-05-30 18:34:54.511059"], ["updated_at", "2019-05-30 18:34:54.511059"]]
+  ↳ db/seeds.rb:33
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:33
+  [1m[36mStuffedAnimal Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."type" IN ('StuffedAnimal') AND "products"."description" = $1 LIMIT $2[0m  [["description", "Elephant"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:52
+  [1m[36mAccessory Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."type" IN ('Accessory') AND "products"."description" = $1 AND "products"."size" = $2 LIMIT $3[0m  [["description", "Shoes"], ["size", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:57
+  [1m[36mAccessory Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."type" IN ('Accessory') AND "products"."description" = $1 AND "products"."size" = $2 LIMIT $3[0m  [["description", "T-Shirt"], ["size", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:60
+  [1m[36mAccessory Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."type" IN ('Accessory') AND "products"."description" = $1 AND "products"."size" = $2 LIMIT $3[0m  [["description", "Tiara"], ["size", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:63
+  [1m[36mAccessory Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."type" IN ('Accessory') AND "products"."description" = $1 AND "products"."size" = $2 LIMIT $3[0m  [["description", "Glasses"], ["size", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:66
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:53
+  [1m[36mCompatibility Create (0.3ms)[0m  [1m[32mINSERT INTO "compatibilities" ("stuffed_animal_id", "accessory_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stuffed_animal_id", 2], ["accessory_id", 7], ["created_at", "2019-05-30 18:34:54.518069"], ["updated_at", "2019-05-30 18:34:54.518069"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:53
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:53
+  [1m[36mCompatibility Create (0.4ms)[0m  [1m[32mINSERT INTO "compatibilities" ("stuffed_animal_id", "accessory_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stuffed_animal_id", 2], ["accessory_id", 10], ["created_at", "2019-05-30 18:34:54.520164"], ["updated_at", "2019-05-30 18:34:54.520164"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:53
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:53
+  [1m[36mCompatibility Create (0.3ms)[0m  [1m[32mINSERT INTO "compatibilities" ("stuffed_animal_id", "accessory_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stuffed_animal_id", 2], ["accessory_id", 11], ["created_at", "2019-05-30 18:34:54.522370"], ["updated_at", "2019-05-30 18:34:54.522370"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:53
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:53
+  [1m[36mCompatibility Create (0.2ms)[0m  [1m[32mINSERT INTO "compatibilities" ("stuffed_animal_id", "accessory_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stuffed_animal_id", 2], ["accessory_id", 12], ["created_at", "2019-05-30 18:34:54.524416"], ["updated_at", "2019-05-30 18:34:54.524416"]]
+  ↳ db/seeds.rb:53
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:53
+  [1m[36mStuffedAnimal Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."type" IN ('StuffedAnimal') AND "products"."description" = $1 LIMIT $2[0m  [["description", "Tiger"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:72
+  [1m[36mAccessory Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."type" IN ('Accessory') AND "products"."description" = $1 AND "products"."size" = $2 LIMIT $3[0m  [["description", "Shoes"], ["size", 0], ["LIMIT", 1]]
+  ↳ db/seeds.rb:77
+  [1m[36mAccessory Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."type" IN ('Accessory') AND "products"."description" = $1 AND "products"."size" = $2 LIMIT $3[0m  [["description", "T-Shirt"], ["size", 0], ["LIMIT", 1]]
+  ↳ db/seeds.rb:80
+  [1m[36mAccessory Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."type" IN ('Accessory') AND "products"."description" = $1 AND "products"."size" = $2 LIMIT $3[0m  [["description", "Tiara"], ["size", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:83
+  [1m[36mAccessory Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."type" IN ('Accessory') AND "products"."description" = $1 AND "products"."size" = $2 LIMIT $3[0m  [["description", "Glasses"], ["size", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:86
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mCompatibility Create (0.2ms)[0m  [1m[32mINSERT INTO "compatibilities" ("stuffed_animal_id", "accessory_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stuffed_animal_id", 3], ["accessory_id", 5], ["created_at", "2019-05-30 18:34:54.530970"], ["updated_at", "2019-05-30 18:34:54.530970"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mCompatibility Create (0.3ms)[0m  [1m[32mINSERT INTO "compatibilities" ("stuffed_animal_id", "accessory_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stuffed_animal_id", 3], ["accessory_id", 8], ["created_at", "2019-05-30 18:34:54.533026"], ["updated_at", "2019-05-30 18:34:54.533026"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mCompatibility Create (0.3ms)[0m  [1m[32mINSERT INTO "compatibilities" ("stuffed_animal_id", "accessory_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stuffed_animal_id", 3], ["accessory_id", 11], ["created_at", "2019-05-30 18:34:54.535189"], ["updated_at", "2019-05-30 18:34:54.535189"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:73
+  [1m[36mCompatibility Create (0.2ms)[0m  [1m[32mINSERT INTO "compatibilities" ("stuffed_animal_id", "accessory_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stuffed_animal_id", 3], ["accessory_id", 12], ["created_at", "2019-05-30 18:34:54.537222"], ["updated_at", "2019-05-30 18:34:54.537222"]]
+  ↳ db/seeds.rb:73
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:73
+  [1m[36mStuffedAnimal Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."type" IN ('StuffedAnimal') AND "products"."description" = $1 LIMIT $2[0m  [["description", "Gorilla"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:92
+  [1m[36mAccessory Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."type" IN ('Accessory') AND "products"."description" = $1 AND "products"."size" = $2 LIMIT $3[0m  [["description", "Shoes"], ["size", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:97
+  [1m[36mAccessory Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."type" IN ('Accessory') AND "products"."description" = $1 AND "products"."size" = $2 LIMIT $3[0m  [["description", "T-Shirt"], ["size", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:100
+  [1m[36mAccessory Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."type" IN ('Accessory') AND "products"."description" = $1 AND "products"."size" = $2 LIMIT $3[0m  [["description", "Tiara"], ["size", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:103
+  [1m[36mAccessory Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."type" IN ('Accessory') AND "products"."description" = $1 AND "products"."size" = $2 LIMIT $3[0m  [["description", "Glasses"], ["size", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:106
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:93
+  [1m[36mCompatibility Create (0.2ms)[0m  [1m[32mINSERT INTO "compatibilities" ("stuffed_animal_id", "accessory_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stuffed_animal_id", 4], ["accessory_id", 6], ["created_at", "2019-05-30 18:34:54.543827"], ["updated_at", "2019-05-30 18:34:54.543827"]]
+  ↳ db/seeds.rb:93
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:93
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:93
+  [1m[36mCompatibility Create (0.2ms)[0m  [1m[32mINSERT INTO "compatibilities" ("stuffed_animal_id", "accessory_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stuffed_animal_id", 4], ["accessory_id", 9], ["created_at", "2019-05-30 18:34:54.546006"], ["updated_at", "2019-05-30 18:34:54.546006"]]
+  ↳ db/seeds.rb:93
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:93
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:93
+  [1m[36mCompatibility Create (0.2ms)[0m  [1m[32mINSERT INTO "compatibilities" ("stuffed_animal_id", "accessory_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stuffed_animal_id", 4], ["accessory_id", 11], ["created_at", "2019-05-30 18:34:54.547791"], ["updated_at", "2019-05-30 18:34:54.547791"]]
+  ↳ db/seeds.rb:93
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:93
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:93
+  [1m[36mCompatibility Create (0.4ms)[0m  [1m[32mINSERT INTO "compatibilities" ("stuffed_animal_id", "accessory_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["stuffed_animal_id", 4], ["accessory_id", 12], ["created_at", "2019-05-30 18:34:54.549512"], ["updated_at", "2019-05-30 18:34:54.549512"]]
+  ↳ db/seeds.rb:93
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:93
+  [1m[36mAccessory Load (0.5ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."type" IN ('Accessory') LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" LIMIT $1[0m  [["LIMIT", 11]]

@@ -6,6 +6,7 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.integer :quantity, null: false, default: 0
       t.float :cost, null: false
       t.float :sale_price, null: false
+      t.string :type, index: true, null: false
 
       t.timestamps
     end

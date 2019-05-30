@@ -6,4 +6,5 @@ class Accessory < Product
     all_size: 3
   }
   validates :size, inclusion: { in: sizes }, presence: true
+  validates :description, uniqueness: { scope: %i[size type] }
 end

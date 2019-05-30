@@ -36,15 +36,18 @@ ActiveRecord::Schema.define(version: 2019_05_30_165709) do
     t.integer "quantity", default: 0, null: false
     t.float "cost", null: false
     t.float "sale_price", null: false
+    t.string "type", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["description"], name: "index_products_on_description"
     t.index ["size"], name: "index_products_on_size"
+    t.index ["type"], name: "index_products_on_type"
   end
 
   create_table "purchases", force: :cascade do |t|
     t.bigint "order_id", null: false
     t.bigint "product_id", null: false
+    t.integer "quantity", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["order_id"], name: "index_purchases_on_order_id"
