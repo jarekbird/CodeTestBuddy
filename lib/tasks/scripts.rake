@@ -1,3 +1,3 @@
 task download_csv_orders: :environment do
-  csv = CSV.read("/lib/OrdersRecord.csv")
+  csv = CSV.read('lib/assets/OrdersRecord.csv')
 end
