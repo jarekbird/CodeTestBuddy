@@ -35,12 +35,14 @@ I found a solution here: https://github.com/rails/rails/issues/26658 which was t
 
 I had begun PART IV by the time 4 hours had passed, but I hadn't completed it. I kept going as I wanted to see if I could finish.
 
-For Part IV, this is the knapsack problem. 
+Part IV is the the knapsack problem. 
 
-I made a few assumptions. I assumed that one stuffed animal was required for a succesful build. In other words, you wouldn't purchase accessories unless you had already decided on a stuffed animal. I also restricted accessories to only accesories that were compatible with any stuffed animals that were being purchased.
+I made a few assumptions. I assumed that one stuffed animal was required for a succesful build. In other words, you wouldn't purchase accessories unless you had already decided on at least one stuffed animal. I also restricted accessories to only accesories that were compatible with any stuffed animals that were being purchased.
 
-It was running super slow so I started by adding memoization to the recursion so that it won't check the same tree twice. It's still running slow. I think the next thing i would want to do if I wwere to continue this further is put memoization at the database call level or perhaps somewhere else. 
+It was running super slow so I started by adding memoization to the recursion so that it won't check the same tree twice.
 
 I completed the entire project at 5/30/2019 4 PM. Adding the memoization took a while.
+
+It's still running slow. I think the next thing i would want to do if I wwere to continue this further is put memoization at the database call level or perhaps somewhere else. Also it might be possible to find some early stopping criteria. Not sure.
 
 This was an interesting problem! Thanks for the opportunity!
