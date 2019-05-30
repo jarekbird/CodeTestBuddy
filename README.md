@@ -28,3 +28,15 @@ I began at 5/30/2019 10:30 AM
 I decided to use STI for Acessories and StuffedAnimals in a Product table because they store almost all the same data and because it makes things easier when storing orders because I can just reference a list of products 
 
 I ran into an interesting issue around using :all as an enum value when building the Accessory Object. Because rails enums generate a bunch of helper methods, with the same name as the enum key, using :all as an enum key creates a .all() method which overrides other active record methods, so active record blocks this. I changed it from :all to :all_size
+
+I encountered a weird error when trying to run rails console /Users/jarekbird/.rvm/gems/ruby-2.5.1/gems/bootsnap-1.4.4/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require': cannot load such file -- /Users/jarekbird/.rvm/rubies/ruby-2.5.1/lib/ruby/2.5.0/x86_64-darwin17/readline.bundle (LoadError). Something is weird in my local environment around rvm and readline. I found a solution here: https://github.com/rails/rails/issues/26658 which was to add "gem 'rb-readline'" to the development seciton of my gemfile. this workes for now, but I probably need to troubleshoot this another time. Other people are saying that rvm goofed and you have to reinstall it which I don't want to spend the time to do today.
+
+I was had begun part PART IV by the time 4 hours had passed, but I hadn't completed it
+
+For Part IV, this is the knapsack problem. 
+
+I made a few assumptions. I assumed that one stuffed animal was required for a succesful build. In other words, you wouldn't purchase accessories unless you had already decided on a stuffed animal. I also restricted accessories to only accesories that were compatible with any stuffed animals that were being purchased.
+
+It was running super slow so I started by adding memoization to the recursion so that it won't check the same tree twice. It's still running slow. I think the next thing i would want to do if I wwere to continue this further is put memoization at the database call level or perhaps somewhere else. 
+
+This was an interesting problem! Thanks for the opportunity!
