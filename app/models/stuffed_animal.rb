@@ -1,0 +1,2 @@
+class StuffedAnimal < Product
+end
