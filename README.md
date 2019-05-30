@@ -39,6 +39,6 @@ I made a few assumptions. I assumed that one stuffed animal was required for a s
 
 It was running super slow so I started by adding memoization to the recursion so that it won't check the same tree twice. It's still running slow. I think the next thing i would want to do if I wwere to continue this further is put memoization at the database call level or perhaps somewhere else. 
 
-I completed the entire project at 5/30/2019 4 PM. Adding the memoization proved to take a while.
+I completed the entire project at 5/30/2019 4 PM. Adding the memoization took a while.
 
 This was an interesting problem! Thanks for the opportunity!
