@@ -31,7 +31,7 @@ I ran into an interesting issue around using :all as an enum value when building
 
 It has been a while since I made a brand new rails project. I encountered a weird error when trying to run rails console /Users/jarekbird/.rvm/gems/ruby-2.5.1/gems/bootsnap-1.4.4/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require': cannot load such file -- /Users/jarekbird/.rvm/rubies/ruby-2.5.1/lib/ruby/2.5.0/x86_64-darwin17/readline.bundle (LoadError). Something is weird in my local environment around rvm and readline.
 
-I found a solution here: https://github.com/rails/rails/issues/26658 which was to add "gem 'rb-readline'" to the development section of my gemfile. this workes for now, but I probably need to troubleshoot this another time. Other people are saying that rvm goofed and you have to reinstall it which I don't want to spend the time to do today.
+I found a solution here: https://github.com/rails/rails/issues/26658 which was to add "gem 'rb-readline'" to the development section of my gemfile. this works for now, but I probably need to troubleshoot this another time. Other people are saying that rvm goofed and you have to reinstall it which I don't want to spend the time to do today.
 
 I had begun PART IV by the time 4 hours had passed, but I hadn't completed it. I kept going as I wanted to see if I could finish.
 
