@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Compatibilities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Stuffed animal</th>
+      <th>Accesory</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @compatibilities.each do |compatibility| %>
+      <tr>
+        <td><%= compatibility.stuffed_animal %></td>
+        <td><%= compatibility.accesory %></td>
+        <td><%= link_to 'Show', compatibility %></td>
+        <td><%= link_to 'Edit', edit_compatibility_path(compatibility) %></td>
+        <td><%= link_to 'Destroy', compatibility, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Compatibility', new_compatibility_path %>

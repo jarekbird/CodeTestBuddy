@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Stuffed animal:</strong>
+  <%= @compatibility.stuffed_animal %>
+</p>
+
+<p>
+  <strong>Accesory:</strong>
+  <%= @compatibility.accesory %>
+</p>
+
+<%= link_to 'Edit', edit_compatibility_path(@compatibility) %> |
+<%= link_to 'Back', compatibilities_path %>
